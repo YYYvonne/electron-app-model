@@ -1,0 +1,80 @@
+{
+  "app": {
+    "route": {
+      "panel": "面板管理",
+      "data": "数据管理",
+      "product": "产品管理"
+    },
+    "pre": {
+      "preZone": "预览区",
+      "modify": "修改ID",
+      "model": "型号：",
+      "idHolder": "请输入产品ID",
+      "panelTitle": "面板：",
+      "panelHolder": "请输入面板ID",
+      "dataZone": "数据区",
+      "dataHolder": "请编辑面板数据",
+      "msgVal": "请输入1-100的整数数字",
+      "valRule": "只能输入1-100的整数",
+      "addMsg": "请同时添加型号和面板数据",
+      "errMsg": "数据格式有误,请重新编辑",
+      "rejectMsg": "该数据已存在",
+      "wrongFormat": "格式错误，如'MAC3LC-8CB16GS4XS-V2'",
+      "mustID": "必须添加ID",
+      "mustPanel": "必须添加面板",
+      "repeat": "与面板中的面板数据重名",
+      "repeatPro": "与产品中的产品数据重名"
+    },
+    "search": {
+      "icon": "搜索",
+      "holder": "请输入ID",
+      "description": "暂无搜索结果",
+      "product": "产品",
+      "panel": "面板",
+      "sure": "确认",
+      "toggle": "切换",
+      "shut": "关闭"
+    },
+    "drag": {
+      "title": "拖拽区",
+      "recycle": "拖拽回收预览区数据",
+      "dustbin": "回收站"
+    },
+    "data": {
+      "upload": "导入数据：",
+      "download": "导出数据：",
+      "dragJSON": "点击或拖拽一份JSON文件到此区域上传",
+      "mustJSON": "必须是一份JSON文件",
+      "loadFile": "下载",
+      "copy": "复制",
+      "success": "复制成功",
+      "delete": "删除",
+      "title": "删除如下错误数据",
+      "errData": "错误数据："
+    },
+    "copyRight": {
+      "rMsg": " © 2023 渡客网络，版本 "
+    },
+    "btn": {
+      "pop": "确认删除此项产品ID?",
+      "panelPop": "确认删除此项面板ID?",
+      "yes": "是",
+      "no": "否",
+      "plus": "新增",
+      "edit": "编辑",
+      "confirm": "确认",
+      "cancel": "取消",
+      "delete": "删除"
+    },
+    "modal": {
+      "ok": "确认",
+      "cancel": "取消",
+      "text": "面板中暂无该数据，确认需要跳转到面板管理页面新增该面板 ？"
+    },
+    "edit": {
+      "errText": "格式错误，如 [[{\"hwtype\":\"None\"},{\"hwtype\":\"RJ45\",\"id\":1} ]]",
+      "error": " 正在使用该面板ID，不可以删除",
+      "product": "产品 "
+    }
+  }
+}
