@@ -8,7 +8,6 @@
   },
   "files": ["out"],
   "win": {
-    "icon": "./src/renderer/src/assets/images/icon.png",
     "target": [
       {
         "target": "nsis",
