@@ -1,0 +1,29 @@
+{
+  "appId": "dkSight",
+  "asar": false,
+  "productName": "dkSight",
+  "asarUnpack": ["node_modules/*", "**/*.{node,dll}"],
+  "directories": {
+    "output": "app"
+  },
+  "files": ["out"],
+  "win": {
+    "icon": "./src/renderer/src/assets/images/icon.png",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["ia32"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false,
+    "uninstallDisplayName": "${productName}"
+  },
+  "linux": {
+    "target": ["AppImage"]
+  }
+}
