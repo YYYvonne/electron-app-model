@@ -1,8 +1,7 @@
-import { createApp } from 'vue'; // @ts-ignore
-import App from './app.vue';
-import { router } from '@renderer/router';
+import { createApp } from 'vue';
+import App from './App.vue';
+import { router } from '@/router';
 import pinia from './stores';
-// import './assets/css/index.css';
 import 'ant-design-vue/dist/antd.css';
 
 const app = createApp(App);

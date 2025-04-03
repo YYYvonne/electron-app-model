@@ -1,5 +1,19 @@
 {
-  "files": [],
-  "references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.web.json" }]
-  
+  "include": ["electron.vite.config.*", "src/**/*.d.ts","src/main/*", "src/preload/*", "src/renderer/*","src/**/*.ts","src/**/*.vue","src/**/*.json","src/preload/*.d.ts", "src/renderer/src/hooks"],
+  "compilerOptions": {
+    "target": "es2019",
+    "composite": true, 
+    "baseUrl": ".",
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports":true,
+    "moduleResolution": "node",
+     "paths": {
+      "@/*": ["src/renderer/src/*"]
+    },
+    "noEmit": true,
+   "types":["node","vite/client"],
+   "module": "ESNext",
+   "strict": false
+  }
 }

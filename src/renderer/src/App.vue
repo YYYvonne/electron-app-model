@@ -2,7 +2,7 @@
   <div class="appHome">
     <h2>appHome</h2>
     <p>
-      {{ t('app.copyRight.rMsg') }} {{ BRANCH }} (r{{ COMMIT_TIMES }} {{ COMMIT_ID }})
+      这是app示例{{ BRANCH }} (r{{ COMMIT_TIMES }} {{ COMMIT_ID }})
       {{ COMMIT_TIME }}
     </p>
   </div>
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
   // @ts-nocheck
-  import { t } from '@renderer/lang/zh';
+  import { t } from '@/lang/zh';
   const { COMMIT_ID, COMMIT_TIMES, BRANCH, COMMIT_TIME } = GLOBAL_VAR;
 </script>
 

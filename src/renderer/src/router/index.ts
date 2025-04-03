@@ -1,8 +1,18 @@
-// @ts-nocheck
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
-import type { RouteConfigs } from '@renderer/types';
-import { t } from '@renderer/lang/zh';
-const routes = <RouteConfigs>[];
+import { createRouter, createWebHashHistory } from 'vue-router';
+import type { RouteConfig } from 'vue-router';
+
+const routes: RouteConfig[] = [
+  {
+    path: '/',
+    redirect: '/app',
+  },
+  {
+    path: '/app',
+    name: 'app',
+    component: () => import('@/App.vue'),
+  },
+];
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routes,

@@ -1,28 +1,64 @@
 {
-  "appId": "dkSight",
+  "appId": "app",
   "asar": false,
-  "productName": "dkSight",
-  "asarUnpack": ["node_modules/*", "**/*.{node,dll}"],
+  "productName": "app",
   "directories": {
-    "output": "app"
+    "buildResources": "build",
+    "output": "./app"
   },
-  "files": ["out"],
+  "files": ["!**/.vscode/*", "!src/*", "!electron.vite.config.{js,ts,mjs,cjs}", "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}", "!{tsconfig.json}", "!{cookie.json}"],
+  "asarUnpack": ["node_modules/*"],
   "win": {
-    "target": [
-      {
-        "target": "nsis",
-        "arch": ["ia32"]
-      }
-    ]
+    "executableName": "app"
   },
   "nsis": {
     "oneClick": false,
     "perMachine": false,
-    "allowToChangeInstallationDirectory": true,
     "deleteAppDataOnUninstall": false,
-    "uninstallDisplayName": "${productName}"
+    "allowToChangeInstallationDirectory": true,
+    "artifactName": "${name}-${version}-setup.${ext}",
+    "shortcutName": "${productName}",
+    "uninstallDisplayName": "${productName}",
+    "createDesktopShortcut": "always",
+    "license": "license.txt"
+  },
+  "releaseInfo": {
+    "releaseNotesFile": "release-1.0.0.md",
+    "releaseDate": "2025-03-04"
+  },
+  "mac": {
+    "entitlementsInherit": "build/entitlements.mac.plist",
+    "extendInfo": [
+      {
+        "NSCameraUsageDescription": "Application requests access to the device's camera."
+      },
+      {
+        "NSMicrophoneUsageDescription": "Application requests access to the device's microphone."
+      },
+      {
+        "NSDocumentsFolderUsageDescription": "Application requests access to the user's Documents folder."
+      },
+      {
+        "NSDownloadsFolderUsageDescription": "Application requests access to the user's Downloads folder."
+      }
+    ]
+  },
+  "dmg": {
+    "artifactName": "${name}-${version}.${ext}"
   },
   "linux": {
-    "target": ["AppImage"]
-  }
+    "target": ["AppImage", "snap", "deb"],
+    "maintainer": "electronjs.org",
+    "category": "Utility"
+  },
+  "appImage": {
+    "artifactName": "${name}-${version}.${ext}"
+  },
+  "npmRebuild": false,
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "https://gitee.com/dockeer/scanner/raw/master/win64/x64/release/"
+    }
+  ]
 }
